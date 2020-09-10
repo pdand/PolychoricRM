@@ -1,14 +1,14 @@
-Package: EFAutilities
+Package: PolychoricRM
 Type: Package
-Title: Utility Functions for Exploratory Factor Analysis
-Version: 2.1.0
-Date: 2020-08-23
-Author: Guangjian Zhang, Ge Jiang, Minami Hattori, Lauren Trichtinger
-Maintainer: Guangjian Zhang <ltrichti@nd.edu>
+Title: Computing polychoric correlations and their asymptotic covariance matrix
+Version: 1.0.0
+Date: 2020-09-10
+Author: Guangjian Zhang, Lauren Trichtinger, Dayoung Lee
+Maintainer: Lauren Trichtinger <ltrichti@nd.edu>
 Depends: R (>= 2.10)
-Description: A number of utility function for exploratory factor analysis
-    are included in this package. In particular, it computes standard errors for
-    parameter estimates and factor correlations under a variety of conditions.
+Description: This package computes the polychoric correlations 
+and their asymptotic covariance matrix which can be used to estimate
+models with ordinal variables.
 License: GPL-2
 LazyLoad: yes
 Imports: 
@@ -19,7 +19,7 @@ Imports:
     utils,
     MASS,
     Rcpp (>= 1.0.3)
-Packaged: 2019-02-02 18:53:11 UTC; ltrichti
+Packaged: 2020-02-02 18:53:11 UTC; ltrichti
 RoxygenNote: 7.1.0
 NeedsCompilation: yes
 Repository: CRAN
