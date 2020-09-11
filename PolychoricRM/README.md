@@ -1,13 +1,13 @@
-# EFAutilities
+# PolychoricRM
 
-The goal of EFAutilities is to provide a number of utilities functions for exploratory factor analysis.  In particular, it computes standard errors for model parameters under a variety of conditions. 
+The goal of PolychoricRM is to estimate polychoric correlations and their asymptotic covariance matrix (ACM).
 
 
 
-This package can be installed directly from CRAN:
+This package can be installed directly from GitHub:
 
-install.packages("EFAutilities")
-library(EFAutilities)
+install.packages("devtools")
+devtools::install_github("pdand/PolychoricRM")
 
 
 
@@ -15,9 +15,11 @@ library(EFAutilities)
 
 Examples using the data sets included in the packages:
 
-data("CPAI537")                   # Chinese personality assessment inventory (N = 537)
+data("BFI228")                   # Big-five inventory (N = 228)
+#For ordinal data, estimating the polychoric correlation and its ACM
+#with 5 cores and 1/(nc*nr) added to all cells
 
-efa(x=CPAI537,factors=4, fm='ml') # normal, ml, oblique, CF-varimax, information, merror='NO'
+polyACM = PolychoricRM(BFI228,NCore=5, IAdjust=1, estimate.acm=TRUE)
 ```R
 ...
 ```
